@@ -1,4 +1,5 @@
 #include <stdbool.h>
+#include <stddef.h>
 
 /* Function to check if a string is numeric */
 int is_numeric(const char *str) {
