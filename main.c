@@ -3,6 +3,7 @@
 #include <string.h>
 #include "monty.h" /* Include the correct header file */
 
+void pop(stack_t **stack, unsigned int line_number);
 int main(int argc, char *argv[]) {
     if (argc != 2) {
         fprintf(stderr, "USAGE: monty file\n");
@@ -38,7 +39,12 @@ int main(int argc, char *argv[]) {
             push(&stack, line_number, arg);
         } else if (strcmp(opcode, "pall") == 0) {
             pall(&stack, line_number);
-        } /* Add more cases for other opcodes */
+        }else if (strcmp(opcode, "pint") == 0) {
+    pint(&stack, line_number);
+    if (strcmp(opcode, "pop") == 0) {
+    pop(&stack, line_number);
+}
+} /* Add more cases for other opcodes */
     }
 
     free_stack(&stack);
